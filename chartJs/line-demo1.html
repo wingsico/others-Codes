@@ -1,0 +1,48 @@
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<title>曲线图</title>
+		<!--<script src="js/Chart.js"></script>-->
+		<!--<script src="js/Chart.min.js"></script>-->
+		<script src="js/Chart-1.0.1-beta.4.js"></script>
+		<script>
+			
+			var data = {
+				labels : ["January","February","March","April","May","June","July"],
+				datasets : [
+					// {
+					// 	lineItemName : "test1",
+					// 	fillColor : "rgba(220,220,220,0.5)",
+					// 	strokeColor : "rgba(220,220,220,1)",
+					// 	pointColor : "rgba(220,220,220,1)",
+					// 	pointStrokeColor : "#fff",
+					// 	data : [65,59,90,81,56,55,40]
+					// },
+					{
+						lineItemName : "test2",
+						fillColor : "rgba(1,1,1,0.5)",
+						strokeColor : "rgba(151,187,205,1)",
+						pointColor : "rgba(1,1,1,1)",
+						pointStrokeColor : "#fff",
+						data : [8,3,6,10,11,14,4]
+					}
+				]
+			};
+			
+			
+			var chartLine = null;
+			window.onload = function(){				
+				var ctx = document.getElementById("myChart").getContext("2d");
+				chartLine = new Chart(ctx).Line(data);
+				
+				
+			}
+			
+			
+		</script>
+	</head>
+
+	<body>
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</body>
+</html>
